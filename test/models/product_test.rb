@@ -9,9 +9,12 @@ class ProductTest < ActiveSupport::TestCase
     assert_not @product.valid?
   end
 
-  test "el producto debe tener categoria" do
+  test "Product must have category" do
     @product.category = nil
     assert_not @product.valid?
   end
 
+  test "Product must have default premium as false" do
+    assert @product.premium == false
+  end
 end
