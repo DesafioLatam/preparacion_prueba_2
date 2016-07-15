@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+p1c1:
+  name: MyString
+  price: 10
+  category: one
+
+p2c1:
+  name: MyString
+  price: 10
+  category: one
+
+p1c2:
+  name: MyString
+  price: 1
+  category: two
+
+p2c2:
+  name: MyString
+  price: 1
+  category: two
+
+p1c3:
+  name: MyString
+  price: 1
+  category: three
+
+p2c3:
+  name: MyString
+  price: 1
+  category: three
