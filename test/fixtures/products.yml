@@ -4,26 +4,31 @@ p1c1:
   name: MyString
   price: 10
   category: one
+  premium: true
 
 p2c1:
   name: MyString
   price: 10
   category: one
+  premium: true
 
 p1c2:
   name: MyString
   price: 1
   category: two
+  premium: true
 
 p2c2:
   name: MyString
   price: 1
   category: two
+  premium: false
 
 p1c3:
   name: MyString
   price: 1
   category: three
+  premium: false
 
 p2c3:
   name: MyString

@@ -15,6 +15,6 @@ class ProductTest < ActiveSupport::TestCase
   end
 
   test "Product must have default premium as false" do
-    assert @product.premium == false
+    assert products(:p2c3).premium == false
   end
 end
