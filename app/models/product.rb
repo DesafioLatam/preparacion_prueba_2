@@ -14,7 +14,11 @@ class Product < ActiveRecord::Base
   end
 
   def price_with_discount
-    new_price = price - (price * category.discount / 100.0)
+    new_price = price - (price * my_discount / 100.0)
     new_price.to_i
+  end
+
+  def my_discount
+    discount || category.discount
   end
 end
