@@ -7,6 +7,8 @@ class Product < ActiveRecord::Base
   scope :last_n, ->(n){order('created_at DESC').limit(n)}
   after_destroy :delete_category_after_last_product_is_destroyed
 
+  scope :name_like, ->(np){where("name like ?", "%#{np}%")}
+
   def delete_category_after_last_product_is_destroyed
     if category.products.size == 0
       category.destroy

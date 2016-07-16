@@ -1,0 +1,12 @@
+<% @products.each do |p| %>
+	<div class="col-md-3">
+		<div class="thumbnail <%= 'border-premium' if p.premium? %>">
+			<img src="http://www.pickmeorganisers.com/wp-content/uploads/starter.jpg">
+			<h3> <%= p.name %> </h3>
+			<p> <%= p.category.name %> </p>
+			<hr>
+			<%= p.price %>
+			<a href="<%= delete_product_path(id: p.id) %>"> Borrar </a>
+		</div>
+	</div>	
+<% end %>
