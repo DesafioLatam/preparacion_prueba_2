@@ -20,6 +20,10 @@ class ProductTest < ActiveSupport::TestCase
 
   test "Scope premiums must have only trues" do
       values = Product.premiums.collect(&:premium) # [true, false, true]
-      assert_not_includes(values, false)  
+      assert_not_includes(values, false)
+  end
+
+  test "fixture" do
+      assert @product.valid?
   end
 end

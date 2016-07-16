@@ -2,9 +2,12 @@
 
 one:
   name: Cat 1
+  discount: 0
 
 two:
   name: Cat 2
+  discount: 50
 
 three:
   name: Cat 3
+  discount: 100
