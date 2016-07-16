@@ -17,4 +17,9 @@ class ProductTest < ActiveSupport::TestCase
   test "Product must have default premium as false" do
     assert products(:p2c3).premium == false
   end
+
+  test "Scope premiums must have only trues" do
+      values = Product.premiums.collect(&:premium)
+      assert_not_includes(values, false)
+  end
 end

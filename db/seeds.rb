@@ -6,9 +6,13 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+
+Product.destroy_all
+Category.destroy_all
+
 3.times do |i|
   c = Category.new(name: "Cat #{i}")
-  c.products.build(name: "Producto #{i}-1", price: 100)
-  c.products.build(name: "Producto #{i}-2", price: 200)
+  c.products.build(name: "Producto #{i}-1", price: 100, premium:true)
+  c.products.build(name: "Producto #{i}-2", price: 200, premium:false)
   c.save!
 end
